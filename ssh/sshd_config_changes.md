@@ -2,7 +2,7 @@
 1. Generating a new public and private key pair on the host
 
 ```bash
-ssh-keygen
+ssh-keygen -t ed25519
 ```
 
 Default location is accepted with no paraphrase
@@ -16,7 +16,7 @@ ssh your-user@vm-ip-address
 3. Copying the public key to the VM:
 
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa.pub your-user@vm-ip-address
+ssh-copy-id -i ~/.ssh/id_ed25519.pub your-user@vm-ip-address
 ```
 
 4. Editing the SSH configuration file on the VM:
